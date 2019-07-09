@@ -17,10 +17,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/player1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player2"
-        app:layout_constraintVertical_bias="0.322"
+        app:layout_constraintVertical_bias="0.621"
         app:srcCompat="@drawable/vs" />
 
     <ImageButton
@@ -28,7 +28,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@android:color/holo_green_light"
-        android:onClick="tocouBotao"
+        android:onClick="buttonTouched"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonPaper"
         app:layout_constraintHorizontal_bias="0.5"
@@ -41,7 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="105dp"
         android:background="@android:color/holo_orange_dark"
-        android:onClick="tocouBotao"
+        android:onClick="buttonTouched"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonScissors"
         app:layout_constraintHorizontal_bias="0.5"
@@ -55,7 +55,7 @@
         android:layout_width="0dp"
         android:layout_height="105dp"
         android:background="@android:color/holo_blue_bright"
-        android:onClick="tocouBotao"
+        android:onClick="buttonTouched"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -69,15 +69,15 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="8dp"
+        android:onClick="buttonTouched"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505"
-        app:srcCompat="@drawable/interrogacao"
-        android:onClick="tocouBotao"/>
+        app:layout_constraintVertical_bias="0.407"
+        app:srcCompat="@drawable/interrogacao" />
 
     <ImageView
         android:id="@+id/player2"
