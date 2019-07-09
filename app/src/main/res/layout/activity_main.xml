@@ -20,6 +20,7 @@
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player2"
+        app:layout_constraintVertical_bias="0.322"
         app:srcCompat="@drawable/vs" />
 
     <ImageButton
@@ -63,17 +64,20 @@
 
     <ImageView
         android:id="@+id/player1"
-        android:layout_width="260dp"
-        android:layout_height="244dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="20dp"
-        android:scaleType="matrix"
-        app:layout_constraintBottom_toTopOf="@+id/buttonScissors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/interrogacao" />
+        app:layout_constraintVertical_bias="0.505"
+        app:srcCompat="@drawable/interrogacao"
+        android:onClick="tocouBotao"/>
 
     <ImageView
         android:id="@+id/player2"
@@ -83,8 +87,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintEnd_toStartOf="@+id/imageVS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/interrogacao" />
