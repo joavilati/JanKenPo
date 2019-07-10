@@ -1,5 +1,6 @@
 package com.example.jankenpo;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     int player1Plays;
     int player2Plays;
+    MediaPlayer playedSound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
         this.mViewHolder.paper = findViewById(R.id.buttonPaper);
         this.mViewHolder.rock = findViewById(R.id.buttonRock);
         this.mViewHolder.scissors = findViewById(R.id.buttonScissors);
+        playedSound = MediaPlayer.create(this,R.raw.alex_play);
 
         this.mViewHolder.appear = new AlphaAnimation(0,1);
         this.mViewHolder.desappear = new AlphaAnimation(1,0);
-        this.mViewHolder.desappear.setDuration(1500);
+        this.mViewHolder.desappear.setDuration(1000);
         this.mViewHolder.appear.setDuration(250);
 
         this.mViewHolder.desappear.setAnimationListener(new Animation.AnimationListener() {
@@ -86,10 +89,7 @@ public class MainActivity extends AppCompatActivity {
             case -4:
                 Toast.makeText(this,"Você Perdeu!",Toast.LENGTH_SHORT).show();// Player 2 win (p1 = Paper && p2 =Scissors )
             case 0:
-                Toast.makeText(this,"Empate!",Toast.LENGTH_SHORT).show();// Draw (p1 = p2)
-                break;
-            case 1:
-                // Player 2 win
+                Toast.makeText(this,"Empate!",Toast.LENGTH_SHORT).show();// Draw (p1 == p2)
                 break;
             case 2:
                 Toast.makeText(this,"Você Perdeu!",Toast.LENGTH_SHORT).show();// Player 2 win (p1 = Rock && p2 = Paper) || (p1 = Scissors && p2 = Rock)
@@ -121,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void buttonTouched(View view){
 
+        playSound();
 
         switch (view.getId()){
 
@@ -149,5 +150,11 @@ public class MainActivity extends AppCompatActivity {
         Animation appear, desappear;
 
     }
+    public void playSound(){
+        if(playedSound != null){
+            playedSound.start();
+        }
+    }
+
 
 }

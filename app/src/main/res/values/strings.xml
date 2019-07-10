@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">JanKenPo</string>
+    <string name="player1">Player1</string>
+    <string name="player2">Player2</string>
+    <string name="versus">Versus</string>
+    <string name="paper">Paper</string>
+    <string name="rock">Rock</string>
+    <string name="scissors">Scissors</string>
 </resources>
